@@ -1,0 +1,47 @@
+@import 'styles';
+
+.custom-width {
+  width: 200px;
+  text-align: center;
+}
+
+.navbar-brand{
+  margin-right: 0;
+}
+
+a{
+  font-size: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: $Gentlemens-Order-secondary;
+}
+
+.normal-line{
+  border-width: 2px;
+  border-color: $Gentlemens-Order-accent2;
+  opacity: 100%;
+  width: 100%;
+}
+
+.bold-line{
+  border-width: 4px;
+  border-color: $Gentlemens-Order-secondary;
+  opacity: 100%;
+  width: 100%;
+}
+
+hr{
+  margin: 4px 0;
+}
+
+.navbar {
+  transition: top 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-hidden {
+  top: -220px;
+}
