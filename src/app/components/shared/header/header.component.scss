@@ -1,7 +1,7 @@
 @import 'styles';
 
 .custom-width {
-  width: 200px;
+  width: 300px;
   text-align: center;
 }
 
@@ -39,9 +39,95 @@ hr{
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
 }
 
 .navbar-hidden {
   top: -220px;
+}
+
+nav{
+  position: relative;
+  z-index: 5;
+}
+
+img{
+  margin: 5px 0;
+}
+
+.space-beneath{
+  margin-bottom: 172px;
+}
+
+.call-to-action{
+  height: 6vh;
+  display: flex;
+  text-align: center;
+  background-color: $Gentlemens-Order-secondary;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3), 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease-out;
+}
+
+.call-to-action:hover{
+  animation: breathe 1.5s ease-in-out infinite;
+}
+
+@keyframes breathe{
+  0%, 100%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.1);
+  }
+}
+
+.normal-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: $Gentlemens-Order-accent2;
+  transition: width 0.3s ease;
+}
+
+.normal-link:hover{
+  transform: scale(1.1);
+}
+
+.normal-link:hover::after {
+  width: 100%;
+}
+
+.normal-link{
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.nav-link{
+  display: inline-block !important;
+}
+
+.call-to-action div{
+  display: flex;
+  border: $Gentlemens-Order-accent2 2px solid;
+  margin: 5px;
+}
+
+.call-to-action div a{
+  margin: auto;
+  display: block;
+  line-height: 1.7vh;
+}
+
+.cta-title{
+  display: block;
+  color: $Gentlemens-Order-primary;
+  margin: auto;
+  font-weight: bold;
+}
+
+.cta-subtitle{
+  color: $Gentlemens-Order-accent2;
+  font-size: 16px;
 }

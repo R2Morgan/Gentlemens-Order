@@ -1,0 +1,51 @@
+@import 'styles';
+
+.green-wallpaper{
+  height:81vh;
+}
+
+.contact-col{
+  margin:10px 10px;
+  padding: 0;
+  width:98.5%;
+  background: rgb(255,247,234);
+  background: radial-gradient(circle, rgba(255,247,234,1) 20%, rgba(236,222,187,1) 65%);
+  height: 50vh;
+ }
+
+.side-col{
+  margin: 10px 10px 10px 0;
+  padding: 10px 0;
+  background: green;
+  height: 50vh;
+}
+
+.bottom-col{
+  background: yellow;
+  height: 28vh;
+}
+
+.self{
+  position: absolute;
+  width: 900px;
+  margin-top:-372.5px;
+  z-index: 10;
+  margin-left:-225px;
+}
+
+h1{
+  text-align: center;
+  margin-top: 15%;
+  color: $Gentlemens-Order-accent1;
+}
+
+.form-control{
+  background-color: $Gentlemens-Order-secondary;
+  color: white;
+}
+
+.form-control:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}

@@ -1,0 +1,24 @@
+@import 'styles';
+
+.div1{
+  width:35vw;
+  height:25vh;
+  background-color: $Gentlemens-Order-primary-alt;
+  box-shadow: 5px 5px;
+  top:25%;
+}
+
+.div2{
+  border-width: 5px;
+  border-color: red;
+}
+
+.div3{
+
+}
+
+h1{
+  text-align: center;
+  padding-top: 50%;
+  padding-bottom: 50%;
+}

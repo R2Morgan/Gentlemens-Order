@@ -7,6 +7,10 @@ import { HeaderComponent } from './components/shared/header/header.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { ArticlePageComponent } from './components/article-page/article-page.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
+import { AboutPageComponent } from './components/about-page/about-page.component';
+import { ContactPageComponent } from './components/contact-page/contact-page.component';
+import { TitleCardComponent } from './components/shared/title-card/title-card.component';
+import { WholecutPageComponent } from './components/landing-pages/wholecut-page/wholecut-page.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +18,11 @@ import { FooterComponent } from './components/shared/footer/footer.component';
     HeaderComponent,
     HomePageComponent,
     ArticlePageComponent,
-    FooterComponent
+    FooterComponent,
+    AboutPageComponent,
+    ContactPageComponent,
+    TitleCardComponent,
+    WholecutPageComponent
   ],
   imports: [
     BrowserModule,

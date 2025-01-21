@@ -1,7 +1,7 @@
 import {Component, HostListener} from '@angular/core';
 
 @Component({
-  selector: 'header',
+  selector: 'header-component',
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

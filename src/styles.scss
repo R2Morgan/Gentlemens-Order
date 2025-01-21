@@ -1,16 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
-
-html, body { height: 100%; }
-body { margin: 0; font-family: "Montserrat", sans-serif !important;}
-
-$Gentlemens-Order-primary: #FFF9EF;
+$Gentlemens-Order-primary: #fff7ea;
 $Gentlemens-Order-secondary: #004225;
 $Gentlemens-Order-accent1: #42230E;
 $Gentlemens-Order-accent2: #EFB951;
 $Gentlemens-Order-primary-alt: #ECDEBB;
 
+html, body { height: 100%; }
+body { margin: 0; font-family: "Montserrat", sans-serif !important;}
+
 .primary-background{
   background-color: $Gentlemens-Order-primary !important;
+}
+
+.green-wallpaper{
+  background-image: url("/assets/backgrounds/Green_Background.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 105%;
+  background-attachment: fixed;
 }
