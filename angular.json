@@ -29,7 +29,7 @@
                 "src"
               ]
             },
-            "outputPath": "dist/gentlemens-order",
+            "outputPath": "dist/The-Gentlemens-Order",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
