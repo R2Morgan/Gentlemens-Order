@@ -8,7 +8,7 @@ import {WholecutPageComponent} from "./components/landing-pages/wholecut-page/wh
 
 const routes: Routes = [
   {path: '', component: WholecutPageComponent},
-  // {path: 'articles', component: ArticlePageComponent},
+  {path: 'articles', component: ArticlePageComponent},
   // {path: 'about', component: AboutPageComponent},
   // {path: 'contact', component: ContactPageComponent},
   // {path: 'wholecuts', component: WholecutPageComponent}
