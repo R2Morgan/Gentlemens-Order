@@ -21,3 +21,56 @@ body { margin: 0; font-family: "Montserrat", sans-serif !important;}
   background-size: 105%;
   background-attachment: fixed;
 }
+
+/* Force overlay container to be fixed and very high in stacking order */
+.cdk-overlay-container {
+  position: fixed !important;
+  inset: 0 !important; /* top:0; right:0; bottom:0; left:0 */
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 100000 !important; /* large so nothing overlays it */
+  pointer-events: none !important;
+}
+
+/* overlay pane (dialog area) must allow pointer events and center content */
+.cdk-overlay-pane {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  pointer-events: auto !important;
+}
+
+/* backdrop should cover full screen and accept clicks */
+.cdk-overlay-backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto !important;
+  background: rgba(0,0,0,0.4); /* optional dim */
+}
+
+/* account for different material class names */
+.mat-dialog-container, .mat-mdc-dialog-container {
+  box-sizing: border-box;
+  max-height: 90vh;
+  width: auto;
+  background: #fff;
+  outline: none;
+}
+
+.cdk-overlay-pane {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  margin: 0 !important;
+  width: auto !important;   /* let Angular set width via open() options */
+  height: auto !important;
+  display: block !important;
+}

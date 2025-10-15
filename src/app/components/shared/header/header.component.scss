@@ -1,36 +1,43 @@
 @import 'styles';
 
 .custom-width {
-  width: 300px;
+  width: 200px;
   text-align: center;
 }
 
-.navbar-brand{
+.navbar-brand {
   margin-right: 0;
 }
 
-a{
-  font-size: 20px;
+.logo-div {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+
+a {
+  font-size: 16px;
   padding-top: 0;
   padding-bottom: 0;
   color: $Gentlemens-Order-secondary;
 }
 
-.normal-line{
+.normal-line {
   border-width: 2px;
   border-color: $Gentlemens-Order-accent2;
   opacity: 100%;
   width: 100%;
 }
 
-.bold-line{
+.bold-line {
   border-width: 4px;
   border-color: $Gentlemens-Order-secondary;
   opacity: 100%;
   width: 100%;
 }
 
-hr{
+hr {
   margin: 4px 0;
 }
 
@@ -45,20 +52,20 @@ hr{
   top: -220px;
 }
 
-nav{
+nav {
   position: relative;
   z-index: 5;
 }
 
-img{
-  margin: 5px 0;
+img {
+  margin: 3px 0;
 }
 
-.space-beneath{
-  margin-bottom: 172px;
+.space-beneath {
+  margin-bottom: 140px;
 }
 
-.call-to-action{
+.call-to-action {
   height: 6vh;
   display: flex;
   text-align: center;
@@ -67,15 +74,15 @@ img{
   transition: transform 0.5s ease-out;
 }
 
-.call-to-action:hover{
+.call-to-action:hover {
   animation: breathe 1.5s ease-in-out infinite;
 }
 
-@keyframes breathe{
-  0%, 100%{
+@keyframes breathe {
+  0%, 100% {
     transform: scale(1);
   }
-  50%{
+  50% {
     transform: scale(1.1);
   }
 }
@@ -91,7 +98,7 @@ img{
   transition: width 0.3s ease;
 }
 
-.normal-link:hover{
+.normal-link:hover {
   transform: scale(1.1);
 }
 
@@ -99,35 +106,123 @@ img{
   width: 100%;
 }
 
-.normal-link{
+.normal-link {
   position: relative;
   transition: transform 0.3s ease;
 }
 
-.nav-link{
+.nav-link {
   display: inline-block !important;
 }
 
-.call-to-action div{
+.call-to-action div {
   display: flex;
   border: $Gentlemens-Order-accent2 2px solid;
   margin: 5px;
 }
 
-.call-to-action div a{
+.call-to-action div a {
   margin: auto;
   display: block;
   line-height: 1.7vh;
 }
 
-.cta-title{
+.cta-title {
   display: block;
   color: $Gentlemens-Order-primary;
   margin: auto;
   font-weight: bold;
+  font-size: 14px;
 }
 
-.cta-subtitle{
+.cta-subtitle {
   color: $Gentlemens-Order-accent2;
-  font-size: 16px;
+  font-size: 12px;
+}
+
+/* --- Hamburger icon --- */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background-color: $Gentlemens-Order-secondary;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* --- Mobile Menu --- */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: $Gentlemens-Order-primary;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+  gap: 1rem;
+  z-index: 1000;
+  border-top: 2px solid $Gentlemens-Order-accent2;
+}
+
+.mobile-menu.active {
+  display: flex;
+}
+
+.mobile-menu a {
+  color: $Gentlemens-Order-secondary;
+  font-size: 1.1rem;
+}
+
+/* --- Responsive Behavior --- */
+@media (max-width: 1024px) {
+  /* Hide desktop links and CTA */
+  .container-fluid > .custom-width,
+  .container-fluid > .call-to-action {
+    display: none !important;
+  }
+
+  /* Position logo-div items */
+  .logo-div {
+    justify-content: center;
+    position: relative;
+    width: 100%;
+  }
+
+  /* Show hamburger and push it to far left */
+  .menu-toggle {
+    display: flex;
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .navbar-brand {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand img {
+    width: 140px;
+    height: auto;
+  }
+
+  .space-beneath {
+    margin-bottom: 27%;
+  }
 }

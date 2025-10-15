@@ -9,8 +9,14 @@ import { ArticlePageComponent } from './components/article-page/article-page.com
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { AboutPageComponent } from './components/about-page/about-page.component';
 import { ContactPageComponent } from './components/contact-page/contact-page.component';
-import { TitleCardComponent } from './components/shared/title-card/title-card.component';
 import { WholecutPageComponent } from './components/landing-pages/wholecut-page/wholecut-page.component';
+import { LeadMagnetPageComponent } from './components/landing-pages/lead-magnet-page/lead-magnet-page.component';
+import { ChoicePopupComponent } from "./components/landing-pages/lead-magnet-page/choice-popup/choice-popup.component";
+import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from '@angular/common/http';
+import {MatButton} from "@angular/material/button";
+import { PrivaryPolicyPageComponent } from './components/legal/privary-policy-page/privary-policy-page.component';
+import { TermsOfServicePageComponent } from './components/legal/terms-of-service-page/terms-of-service-page.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +27,18 @@ import { WholecutPageComponent } from './components/landing-pages/wholecut-page/
     FooterComponent,
     AboutPageComponent,
     ContactPageComponent,
-    TitleCardComponent,
-    WholecutPageComponent
+    WholecutPageComponent,
+    LeadMagnetPageComponent,
+    ChoicePopupComponent,
+    PrivaryPolicyPageComponent,
+    TermsOfServicePageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    MatButton,
   ],
   providers: [
     provideAnimationsAsync()
