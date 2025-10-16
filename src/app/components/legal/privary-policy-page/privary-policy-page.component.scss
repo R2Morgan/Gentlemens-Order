@@ -1,0 +1,39 @@
+@import 'styles.scss';
+
+.background{
+
+}
+
+.privacy-policy-section {
+  color: $Gentlemens-Order-secondary;
+  line-height: 1.8;
+  font-size: 15px;
+  width: 80%;
+  margin: 0 auto;
+
+  h1, h3 {
+    color: $Gentlemens-Order-accent1;
+  }
+
+  a.normal-link {
+    color: $Gentlemens-Order-accent2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $Gentlemens-Order-secondary;
+    }
+  }
+
+  ul {
+    list-style-type: disc;
+    margin: 1rem auto;
+    padding-left: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      width: 90% !important;
+    }
+  }
+}
