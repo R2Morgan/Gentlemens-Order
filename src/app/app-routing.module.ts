@@ -8,6 +8,9 @@ import {WholecutPageComponent} from "./components/landing-pages/wholecut-page/wh
 import {LeadMagnetPageComponent} from "./components/landing-pages/lead-magnet-page/lead-magnet-page.component";
 import {PrivaryPolicyPageComponent} from "./components/legal/privary-policy-page/privary-policy-page.component";
 import {TermsOfServicePageComponent} from "./components/legal/terms-of-service-page/terms-of-service-page.component";
+import {
+  StyleConsultationPageComponent
+} from "./components/landing-pages/style-consultation-page/style-consultation-page.component";
 
 const routes: Routes = [
   {path: '', component: LeadMagnetPageComponent},
@@ -17,7 +20,8 @@ const routes: Routes = [
   {path: 'tos', component: TermsOfServicePageComponent},
   {path: 'about', component: AboutPageComponent},
   {path: 'contact', component: ContactPageComponent},
-  {path: 'wholecuts', component: WholecutPageComponent}
+  {path: 'wholecuts', component: WholecutPageComponent},
+  {path: 'style-consultation', component: StyleConsultationPageComponent}
 ];
 
 @NgModule({

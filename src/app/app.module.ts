@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatButton} from "@angular/material/button";
 import { PrivaryPolicyPageComponent } from './components/legal/privary-policy-page/privary-policy-page.component';
 import { TermsOfServicePageComponent } from './components/legal/terms-of-service-page/terms-of-service-page.component';
+import { StyleConsultationPageComponent } from './components/landing-pages/style-consultation-page/style-consultation-page.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { TermsOfServicePageComponent } from './components/legal/terms-of-service
     LeadMagnetPageComponent,
     ChoicePopupComponent,
     PrivaryPolicyPageComponent,
-    TermsOfServicePageComponent
+    TermsOfServicePageComponent,
+    StyleConsultationPageComponent
   ],
   imports: [
     BrowserModule,
