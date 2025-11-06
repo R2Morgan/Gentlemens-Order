@@ -7,7 +7,13 @@ import {Router} from "@angular/router";
   styleUrl: './style-consultation-page.component.scss'
 })
 export class StyleConsultationPageComponent {
+  heroInfoHover: boolean = false;
+
   constructor() {
+
+  }
+
+  callToAction(): void {
     window.location.href='https://calendar.app.google/Z697T32S2h7p7cKm7';
   }
 }

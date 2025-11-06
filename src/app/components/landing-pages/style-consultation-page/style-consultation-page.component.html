@@ -1,1 +1,14 @@
-<p>style-consultation-page works!</p>
+<section class="hero-section">
+  <p class="subtitle">
+    Finally — A Way to Look the Part, Feel the Part, and Live the Part
+  </p>
+  <h1>
+    A private 60-minute consultation to refine your image, elevate your confidence,
+    and align your outer appearance with the man you’re becoming
+  </h1>
+  <button (click)="callToAction()">I WANT TO LOOK BETTER!</button>
+  <div class="cc" (mouseenter)="heroInfoHover = true" (mouseleave)="heroInfoHover = false">
+    <p *ngIf="heroInfoHover">cc. The Sartorial Club</p>
+    <i *ngIf="!heroInfoHover" class="bi bi-info-circle mx-2"></i>
+  </div>
+</section>
