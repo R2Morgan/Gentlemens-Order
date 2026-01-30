@@ -901,3 +901,9 @@ button:hover {
     padding: 1.2rem;
   }
 }
+
+@media (max-width: 405px) {
+  .hero-section button {
+    padding: 0.7rem 0.5rem;
+  }
+}
