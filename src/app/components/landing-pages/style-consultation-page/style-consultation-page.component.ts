@@ -28,7 +28,7 @@ export class StyleConsultationPageComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.intervalId = setInterval(() => {
       this.activeIndex = (this.activeIndex + 1) % this.testimonials.length;
-    }, 5000);
+    }, 3000);
   }
 
   ngOnDestroy(): void {

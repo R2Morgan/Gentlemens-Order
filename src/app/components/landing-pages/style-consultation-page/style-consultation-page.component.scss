@@ -255,6 +255,10 @@ button:hover {
   font-size: 0.9rem !important;
 }
 
+.mobile-text {
+  display: none;
+}
+
 .what-this-is-section {
   margin-top: -1px;
   padding: 8vh 4vw;
@@ -410,62 +414,66 @@ button:hover {
   text-shadow: 0 0 10px rgba(0,0,0,0.7);
 }
 
-.cta {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-align: center;
-  color: #fff;
-  text-shadow: 0 0 10px rgba(0,0,0,0.3);
+.cta-section {
   display: flex;
   justify-content: center;
+  align-items: center;
   background:
-    linear-gradient(
-        120deg,
-        rgba(5, 5, 5, 0.95) 45%,
-        rgba(5, 5, 5, 0.6) 60%,
-        rgba(5, 5, 5, 0.2) 82%
-    ),
-    linear-gradient(0deg, #050505, rgb(55, 49, 38));
+          linear-gradient(
+                          120deg,
+                          rgba(5, 5, 5, 0.95) 25%,
+                          rgba(5, 5, 5, 0.6) 55%,
+                          rgba(5, 5, 5, 0.2) 90%
+          ),
+          linear-gradient(0deg, #050505, rgb(55, 49, 38));
+  color: #fff;
+  text-align: center;
+  padding: 6vh 5vw; /* compact spacing */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-top: -1px;
 }
 
 .cta-inner {
-  width: 100%;
-  height: 100%;
-  padding: 6rem 2rem;
-  background: linear-gradient(90deg, #836a50, #e6d5b5, #836a50);
-  margin: -1px 10vw 10vh 10vw;
+  max-width: 700px;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.4);
+  animation: fadeUp 0.8s ease forwards;
 }
 
-.cta h2 {
-  font-size: 2.8rem;
-  font-weight: 800;
+.cta-section h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.25;
   margin-bottom: 1rem;
-  line-height: 1.2;
+  text-shadow: 0 0 6px rgba(0,0,0,0.4);
 }
 
 .cta-sub {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  margin-bottom: 1.8rem;
   opacity: 0.9;
-  margin-bottom: 2.5rem;
+  line-height: 1.5;
 }
 
 .cta-button {
   background: linear-gradient(145deg, #f7c86b, #f4b94f);
   color: #3a2a18;
-  font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: 0.8px;
-  padding: 1.1rem 3rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.6px;
+  padding: 0.9rem 2rem;
   border-radius: 9999px;
   border: none;
   cursor: pointer;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.25);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .cta-button:hover {
   transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 14px 36px rgba(0,0,0,0.35);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.45);
 }
 
 .who-content h2 strong {
@@ -575,335 +583,532 @@ button:hover {
 }
 
 .application-section {
-  padding: 10vh 2rem;
-  background: linear-gradient(
-      180deg,
-      #efe1c7 0%,
-      #e6d5b5 50%,
-      #e0cfad 100%
-  );
+  padding: 12vh 2vw;
   display: flex;
   justify-content: center;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #2b241b;
+  background: linear-gradient(180deg, #f6f1e7 0%, #e6d5b5 50%, #dfc9a5 100%);
+  position: relative;
+  overflow: hidden;
 }
 
 .application-inner {
-  max-width: 720px;
+  max-width: 75vw;
   text-align: center;
+  background: rgba(255,255,255,0.08);
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  backdrop-filter: blur(6px);
+  position: relative;
 }
 
 .application-inner h2 {
   font-size: 2.6rem;
-  font-weight: 800;
+  font-weight: 900;
   margin-bottom: 1.5rem;
   letter-spacing: 0.4px;
+  line-height: 1.2;
+  color: #3a2a18;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 .application-inner .lead {
   font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 0.5rem;
-  opacity: 0.9;
+  line-height: 1.65;
+  margin-bottom: 2.5rem;
+  color: #3a2a18;
 }
 
 .cta-button {
   background: linear-gradient(145deg, #f7c86b, #f4b94f);
   color: #3a2a18;
   border: none;
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: 0.8px;
-  padding: 1rem 2.8rem;
+  padding: 1.1rem 3.2rem;
   border-radius: 9999px;
   cursor: pointer;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .cta-button:hover {
-  transform: translateY(-1px) scale(1.05);
-  box-shadow: 0 14px 32px rgba(0,0,0,0.35);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 16px 42px rgba(0,0,0,0.35);
+  background: linear-gradient(145deg, #f4b94f, #f7c86b);
 }
 
 .application-details {
   margin-top: 3rem;
   padding-top: 2rem;
   border-top: 1px solid rgba(43,36,27,0.2);
-}
-
-.application-details p {
   font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 0.75rem;
-  opacity: 0.85;
+  line-height: 1.55;
+  color: #3a2a18;
 }
 
 .application-details strong {
   font-weight: 700;
 }
 
+/* ===========================
+   MOBILE: COMPLETE REDESIGN
+   Editorial / Luxury / Calm
+   =========================== */
 
-/* --- General Mobile Adjustments --- */
 @media (max-width: 900px) {
+
+  /* RESET GLOBAL NOISE */
+  * {
+    text-shadow: none !important;
+    animation: none !important;
+  }
+
+  /* ---------- HERO ---------- */
   .hero-section {
-    height: 70vh; /* slightly shorter to fit screens */
-    background-position: center 40%; /* keep main subject visible */
+    height: 100vh;
+    min-height: 100vh;
+    padding: 0 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image:
+            linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+            url('../../../../assets/creatives/gentlemans-renaissance/black-tie.JPG');
+    background-size: cover;
+    background-position: center;
   }
 
-  .hero-section h1 {
-    margin: 1rem 10%;
-    font-size: 1.6rem;
-    line-height: 1.3;
-  }
-
-  .hero-section .subtitle {
-    font-size: 1.05rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .hero-section button {
-    padding: 0.9rem 2rem;
-    font-size: 0.95rem;
-  }
-
-  .story-02-section {
+  .hero-content {
+    max-width: 520px;
+    padding: 0 1.75rem;
+    display: flex;
     flex-direction: column;
-    padding: 3rem 2rem;
-    gap: 2.5rem;
+    align-items: center;
     text-align: center;
+  }
+
+  /* --- Kicker / Subtitle --- */
+  .hero-section .subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    opacity: 0.75;
+    margin-bottom: 1.25rem;
+    font-weight: 500;
+  }
+
+  /* --- Headline --- */
+  .hero-section h1 {
+    font-size: 1.45rem;
+    line-height: 1.45;
+    font-weight: 500;
+    margin: 0;
+    color: #ffffff;
+  }
+
+  /* --- CTA Button --- */
+  .hero-section button {
+    margin-top: 2.75rem;
+    padding: 0.75rem 2.4rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    background: transparent;
+    color: #f7c86b;
+    border: 1px solid rgba(247, 200, 107, 0.6);
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .hero-section button:hover {
+    transform: none;
+    box-shadow: none;
+    background: rgba(247, 200, 107, 0.08);
+  }
+
+  /* --- Subheader Line --- */
+  .hero-section .subheader {
+    margin-top: 3rem;
+    font-size: 0.75rem;
+    opacity: 0.6;
+    max-width: 320px;
+    line-height: 1.6;
+  }
+
+  /* --- Remove CC on Mobile Hero --- */
+  .hero-section .cc {
+    display: none;
+  }
+
+  /* ---------- STORY 01 ---------- */
+  .story-01-section {
+    min-height: auto;
+    padding: 4.5rem 1.5rem;
+    background: #050505;
+  }
+
+  .story-wrapper {
+    max-width: 620px;
+  }
+
+  .story-content {
+    background: none;
+    padding: 0;
+    box-shadow: none;
+    text-align: left;
+  }
+
+  .story-content h2 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .story-content p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    opacity: 0.9;
+    text-align: center;
+  }
+
+  /* ---------- STORY 02 ---------- */
+  .story-02-section {
+    padding: 5rem 1.5rem;
+    flex-direction: column;
+    gap: 3rem;
+    background: #0a0a0a;
+  }
+
+  .story-02-section img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    border-radius: 0;
+    box-shadow: none;
   }
 
   .story-02-section > .story-div {
     width: 100%;
-    padding-left: 0;
-    border-left: none;
+    padding: 0;
+    border: none;
   }
 
   .story-02-section h2 {
-    font-size: 1.9rem;
-  }
-
-  .story-02-section img {
-    height: auto;
-    max-height: 50vh;
-    border-radius: 12px;
-  }
-
-  .who-section {
-    flex-direction: column;
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
     text-align: center;
   }
 
-  .who-image {
+  .story-02-section p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    text-align: center;
+  }
+
+  .hover-swap {
+    position: relative;
     width: 100%;
-    height: 35vh;
+    height: 62vh;
+    max-width: 420px;       /* bigger presence */
+    aspect-ratio: 3 / 4;
+    margin: 2rem auto 0;
+    overflow: hidden;
+    border-radius: 16px;
+  }
+
+  .hover-swap img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.45s ease;
+  }
+
+  .hover-swap img.base {
+    opacity: 1;
+  }
+
+  .hover-swap img.hover {
+    opacity: 0;
+  }
+
+  .hover-swap:hover img.hover {
+    opacity: 1;
+  }
+
+  .desktop-text {
+    display: none;
+  }
+
+  .mobile-text {
+    display: inline;
+  }
+
+  /* kill old constraints cleanly */
+  .story-02-section img {
+    height: 100%;
+    max-height: none;
+  }
+
+  /* ---------- WHAT THIS IS ---------- */
+  .what-this-is-section {
+    padding: 6vh 2vw;
+    text-align: center;
+    background: linear-gradient(160deg, #e38518cc, #efb951cc);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .what-this-is-section h2 {
+    font-size: 1.9rem;
     margin-bottom: 2rem;
-  }
-
-  .who-content {
-    width: 100%;
-    padding: 2rem 1.5rem;
-  }
-
-  .who-content h2 {
-    font-size: 2rem;
-    line-height: 1.25;
+    line-height: 1.3;
   }
 
   .cards-wrapper {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    width: 100%;
   }
 
   .card {
-    width: 85%;
-    padding: 1.8rem 1.2rem;
-  }
-
-  .what-this-is-section h2 {
-    font-size: 2rem;
-  }
-}
-
-/* --- Small Mobile (phones) --- */
-@media (max-width: 768px) {
-  .hero-section {
-    height: 65vh;
-    background-position: center;
-    background-position-y: 40%;
-    background-position-x: 44%;
-    background-size: 300%;
-    padding: 0 1rem;
-  }
-
-  .hero-section h1 {
-    font-size: 1.3rem;
-    line-height: 1.25;
-    margin: 0.8rem 5%;
-  }
-
-  .hero-section .subtitle {
-    font-size: 0.95rem;
-  }
-
-  .hero-section button {
-    padding: 0.7rem 1.6rem;
-    font-size: 0.9rem;
-    width: 70vw;
-    height: 5vh;
-  }
-
-  .cc {
-    font-size: 0.7rem;
-    right: 0.5rem;
-    bottom: 0.5rem;
-  }
-
-  .story-content {
+    width: 90%;
+    max-width: 360px;
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 1.5rem 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 1 !important; /* Force visibility */
+    transform: translateY(0) !important; /* Reset animation transforms */
   }
 
-  .story-content h2 {
-    font-size: 1.5rem;
+  .card picture {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    overflow: hidden;
   }
 
-  .story-01-section{
-    margin-top:-1px;
-    background-position: center;
-    background-position-y: 116.3%;
-    background-position-x: 44%;
-    background-size: 300%;
+  .card picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 
-  .story-content p {
+  .card p {
     font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
   }
 
-  .story-02-section {
-    padding: 3rem 1rem;
-    gap: 2rem;
+  .number {
+    top: -12px;
+    left: -12px;
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
   }
 
-  .story-02-section img {
-    max-height: 40vh;
+  .what-this-is-section p {
+    font-size: 1rem;
+    max-width: 320px;
+    margin: 1rem auto;
+    line-height: 1.5;
+  }
+
+  /* ---------- WHO ---------- */
+  .who-section {
+    flex-direction: column;
   }
 
   .who-image {
-    height: 50vh;
+    width: 100%;
+    height: auto;
+  }
+
+  .who-image img {
+    height: auto;
+    transform: none;
+  }
+
+  .who-content {
+    width: 100%;
+    padding: 5rem 1.5rem;
+    background: #050505;
+  }
+
+  .who-content::before {
+    display: none;
   }
 
   .who-content h2 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
+    margin-bottom: 1.25rem;
+    text-align: center;
   }
 
   .who-content .intro,
   .who-content .outro,
   .who-list li {
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 0.95rem;
+    line-height: 1.7;
   }
 
-  .cards-wrapper {
-    gap: 1.5rem;
+  .outro, .intro{
+    text-align: center;
   }
 
-  .card {
-    width: 90%;
-    padding: 1.5rem 1rem;
-  }
-
-  .cta{
-    background:
-      linear-gradient(
-          120deg,
-          rgba(5, 5, 5, 0.95) 25%,
-          rgba(5, 5, 5, 0.6) 40%,
-          rgba(5, 5, 5, 0.2) 60%
-      ),
-      linear-gradient(0deg, #050505, rgb(55, 49, 38));
+  /* ---------- CTA ---------- */
+  .cta-section {
+    display: none;
+    height: 0;
+    background: #050505;
   }
 
   .cta-inner {
-    padding: 2rem 1rem;
-    margin: 0 5vw 2vh 5vw;
+    margin: 0;
+    background: #050505;
+    height: 0;
   }
 
   .cta h2 {
-    font-size: 2rem;
-  }
-
-  .cta p {
-    margin-bottom: 0;
+    font-size: 1.8rem;
   }
 
   .cta-sub {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
-  .application-inner h2 {
-    font-size: 2rem;
+  .cta-button {
+    margin-top: 2rem;
+    padding: 0.75rem 2rem;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    border-radius: 0;
+    box-shadow: none;
   }
 
-  .application-inner .lead {
-    font-size: 1rem;
+  /* ---------- SOCIAL PROOF ---------- */
+  .social-proof-section {
+    padding: 0 1.5rem;
+    background: linear-gradient(180deg, #050505, #1e1b18);
+    color: #f4e6c8;
+    font-family: "Georgia", serif;
+    text-align: center;
+    position: relative;
   }
 
-  .application-details p {
-    font-size: 0.9rem;
+  .social-proof-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.12;
+    z-index: 0;
+  }
+
+  .social-proof-center {
+    position: relative;
+    z-index: 1;
+    max-width: 90%;
+    margin: 0 auto;
   }
 
   .social-proof-center h2 {
     font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    margin-bottom: 1rem;
+  }
+
+  .social-proof-center .intro {
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-bottom: 2.5rem;
+    opacity: 0.85;
+  }
+
+  .testimonial-carousel {
+    position: relative;
+    overflow: hidden;
   }
 
   .testimonial {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
     font-size: 1rem;
+    line-height: 1.6;
+    padding: 0 1rem;
+  }
+
+  .testimonial.active {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .testimonial span {
-    font-size: 0.85rem;
-  }
-}
-
-/* --- Extra fine-tuning for really small phones (under 480px) --- */
-@media (max-width: 480px) {
-  .hero-section h1 {
-    font-size: 1.1rem;
-    margin: 1rem 5%;
-  }
-
-  .hero-section button {
-    padding: 0.7rem 1.5rem;
+    display: block;
+    margin-top: 0.7rem;
     font-size: 0.9rem;
+    font-weight: 600;
+    color: #f7c86b;
+    letter-spacing: 0.5px;
   }
 
-  .story-content h2 {
-    font-size: 1.3rem;
+  /* ---------- APPLICATION ---------- */
+  .application-section {
+    padding: 14vh 4vw; /* more vertical breathing room */
   }
 
-  .story-content p {
+  .application-inner {
+    padding: 3rem 2rem; /* more inner padding */
+    border-radius: 14px;
+    max-width: 95%; /* use more width on smaller screens */
+  }
+
+  .application-inner h2 {
+    font-size: 2.2rem; /* slightly bigger headline */
+    line-height: 1.3;
+  }
+
+  .application-inner .lead {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1rem; /* more space before button */
+  }
+
+  .cta-button {
+    width: 90%; /* fill more of the screen width */
+    font-size: 1.05rem;
+    padding: 1.2rem 2.5rem;
+  }
+
+  .application-details {
     font-size: 0.95rem;
+    line-height: 1.65;
+    margin-top: 1.5rem; /* more breathing room */
+    padding-top: 2.5rem;
   }
 
-  .who-content h2 {
-    font-size: 1.6rem;
-  }
-
-  .cards-wrapper {
-    gap: 1rem;
-  }
-
-  .card {
-    width: 95%;
-    padding: 1.2rem;
-  }
 }
 
-@media (max-width: 405px) {
-  .hero-section button {
-    padding: 0.7rem 0.5rem;
-  }
-}

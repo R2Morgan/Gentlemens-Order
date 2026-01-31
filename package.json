@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "start w. nmobile": "ng serve --host 0.0.0.0",
     "deploy": "ng build --configuration production --base-href / && cp dist/The-Gentlemens-Order/browser/index.html dist/The-Gentlemens-Order/browser/404.html && gh-pages -d dist/The-Gentlemens-Order/browser",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
